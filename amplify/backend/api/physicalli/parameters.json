@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "physicalli",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authphysicallie192945c",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

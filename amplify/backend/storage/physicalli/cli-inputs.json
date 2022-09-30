@@ -1,0 +1,16 @@
+{
+  "resourceName": "physicalli",
+  "policyUUID": "0bde22a9",
+  "bucketName": "physicallie2aea93f50164211b96b4329b687ef66",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

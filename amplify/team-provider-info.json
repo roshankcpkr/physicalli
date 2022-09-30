@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-physicalli-dev-204317-authRole",
+      "UnauthRoleArn": "arn:aws:iam::813987955265:role/amplify-physicalli-dev-204317-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::813987955265:role/amplify-physicalli-dev-204317-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-physicalli-dev-204317-deployment",
+      "UnauthRoleName": "amplify-physicalli-dev-204317-unauthRole",
+      "StackName": "amplify-physicalli-dev-204317",
+      "StackId": "arn:aws:cloudformation:us-east-1:813987955265:stack/amplify-physicalli-dev-204317/538f5130-40d0-11ed-8886-0a7c47c9ec53",
+      "AmplifyAppId": "d35k3ru9hsakk9"
+    },
+    "categories": {
+      "auth": {
+        "physicallie192945c": {},
+        "true": {}
+      }
+    }
+  }
+}

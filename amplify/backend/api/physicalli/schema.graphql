@@ -1,0 +1,30 @@
+type Jobpost @model
+@auth(rules: [
+    { allow: owner },
+    { allow: public, operations: [read] },
+    { allow: private, operations: [read] }
+  ]){
+  id: ID!
+  title: String!
+  description: String!
+  image: String
+  price: String
+  contact: String!
+  location: String!
+  pro: String!
+}
+
+type User @model @auth(rules: [
+    { allow: owner },
+    { allow: public, operations: [read] },
+    { allow: private, operations: [read] }
+  ]){
+  id: ID!
+  firstname: String!
+  lastname: String!
+  email: String!
+  description: String
+  skill: [String]
+  profilepic: String
+  location: String!
+}
