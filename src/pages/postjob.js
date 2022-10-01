@@ -4,7 +4,7 @@ import '@aws-amplify/ui-react/styles.css'
 import React, { useEffect, useState } from 'react'
 import {v4 as uuidv4} from 'uuid'
 import { API, graphqlOperation, Storage } from "aws-amplify";
-import {createJobpost} from '../graphql/mutations'
+import {createJobpost } from '../graphql/mutations'
 import config from "../aws-exports"
 import { Header } from '../components';
 import { useNavigate } from 'react-router-dom';
@@ -39,14 +39,12 @@ export default function PostJob()
     })
     const handleSubmit = async(e)=>{
         e.preventDefault()
-        console.log(jobdetails)
         try{
-            if(!jobdetails.title || !jobdetails.description || !jobdetails.contact) return
-            await API.graphql({
-                query: queries.createJobpost,
-                variables: {input: jobdetails},
-                authMode: 'AWS_IAM'
-            })
+            if(!jobdetails.title || !jobdetails.description || !jobdetails.contact || !jobdetails.location) return
+            await API.graphql(API.graphql(graphqlOperation(createJobpost, {
+                input: jobdetails
+            })))
+            
             setJobDetails({
                 title: "",
                 description: "",

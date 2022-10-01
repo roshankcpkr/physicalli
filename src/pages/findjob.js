@@ -1,7 +1,6 @@
 import { Authenticator} from '@aws-amplify/ui-react'
 import { JobContext, JobProvider } from '../context/jobs.js'
 import React, {useContext, useEffect, useState} from 'react'
-import { InterestProvider, InterestContext } from '../context/interested'
 import { Header } from '../components/index.js'
 import { Auth } from 'aws-amplify'
 
@@ -19,17 +18,21 @@ export default function FindJob() {
   {
 
     const {jobs} = useContext(JobContext)
-    const {addInterest} = useContext(InterestContext)
-    console.log(jobs)
+    console.log("i am jobs", jobs)
     return (
       <section>
-    {jobs ? jobs.map(({image, id, title}) =>(
-      <div key={id}>
+    {jobs ? jobs.map(({image, id, title, description, contact, location}) =>(
+      <div key={id} className="max-w-sm rounded-xl shadow-xl mx-auto m-4 mb-8">
               <div>
-                <img src={image} alt={title} />
-                <p>{title}</p>
+                <img src={image} alt={title} className="w-full"/>
               </div>
-              <button onClick={()=> addInterest(id)}>Interested</button>
+              <div className='p-4'>
+              <p className='text-center font-bold text-2xl'>Title: {title}</p>
+              <p className='text-lg font-semibold text-center m-2'>Description: {description}</p>
+              <p className='text-lg font-semibold text-center m-2'>Contact: {contact}</p>
+              <p className='text-lg font-semibold text-center m-2'>Address: {location}</p>
+              </div>
+                
               
             </div>
       )) : <h2>Jobs not found</h2>}
@@ -46,10 +49,7 @@ return (
   />
   <Authenticator>
    <JobProvider>
-   <InterestProvider>
-       <JobsPage />
-       
-    </InterestProvider>
+       <JobsPage />       
     </JobProvider>
   </Authenticator>
   </>

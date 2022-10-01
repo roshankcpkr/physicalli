@@ -9,7 +9,6 @@ const JobDetails = () =>{
         const history = useNavigate()
         const {jobs} = useContext(JobContext)
         const {addInterest} = useContext(InterestContext)
-        console.log(jobs)
         const job = jobs.find((job) =>{
             return job.id === id
         })

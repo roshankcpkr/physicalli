@@ -15,6 +15,12 @@
       "auth": {
         "physicallie192945c": {},
         "true": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d35k3ru9hsakk9",
+          "type": "manual"
+        }
       }
     }
   }

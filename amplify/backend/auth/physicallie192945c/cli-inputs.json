@@ -41,7 +41,8 @@
       "email"
     ],
     "userPoolGroupList": [
-      "physicalli"
+      "physicalli",
+      "newuser"
     ],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

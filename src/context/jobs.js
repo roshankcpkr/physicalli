@@ -17,11 +17,12 @@ const JobProvider = ({children}) =>{
                 query: listJobposts
             })
             const jobsDet = data.data.listJobposts.items
+           console.log("i am running")
             setJobs(jobsDet)
         }
         catch(err)
         {
-            console.log(err)
+            setJobs(err.data.listJobposts.items)
         }
     }
 

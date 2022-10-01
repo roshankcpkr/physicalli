@@ -10,15 +10,15 @@ export default function Body()
     return(
         <main className='h-full'>
         <div className='w-full border-b py-32 h-3/4 flex align-items'>
-        <div className='flex container max-w-4xl mx-auto h-full align-items'>
-            <div className='min-h-full mt-4 w-1/2'>
+        <div className='flex container flex-col md:flex-row max-w-4xl mx-auto h-full items-center align-items'>
+            <div className='min-h-full md:m-0 mb-8 md:mb-0 mt-4 w-3/4 md:w-1/2'>
             <h2 className='mb-4 text-4xl font-bold'>Want to hire worker for your physical task?</h2>
             <p className='text-xl text-gray-700 mt-8 mb-4'>Why not try Physicalli? Get technician at your place easily.</p>
             <NavLink to={ROUTES.LOGIN}>
                 <button className='rounded-lg text-white font-semibold py-2 px-4 mt-4 text-lg transition ease-in-out delay-150 bg-gray-700 hover:scale-110 hover:bg-gray-800 duration-300'>Get Started</button>
             </NavLink>
             </div>
-            <div className='ml-4 w-1/2'>
+            <div className='ml-4 w-3/4 md:w-1/2'>
                 <img src="physicalli-connect.webp" alt="easy-work"/>
             </div>
         </div>
@@ -28,7 +28,7 @@ export default function Body()
             <p className=' mt-8 mb-4 w-2/3 text-gray-600 text-xl'>Physicalli is a platform to hire technicians for your physically demanding jobs. Did your bike get broken on the way? Want to 
                 fix your broken tv but don't
                 know where to find technician? Looking for physically demanding jobs? Let physicalli solve them for you.</p>
-            <div className='grid grid-cols-3 p-16'>
+            <div className='grid md:grid-cols-3 col-auto auto-rows-auto p-16 '>
                 <div className='flex flex-col m-2 hover:shadow-2xl items-center text-center align-items p-8'>
                     <img src="./technician.webp" alt="connect with technician" className=' w-20'/>
                     <p className='font-semibold text-base  m-2'>Connects you with technician</p>
@@ -69,9 +69,9 @@ export default function Body()
             </div>
             
         </div>
-        <div className='flex container rounded max-w-6xl mx-auto align-items bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 to-blue-900 mt-16 mb-16'>
-            <img src="./postjob.png" alt="post job" className='w-2/4 h-full'/>
-            <div className='flex flex-col ml-4 w-2/4 p-8'>
+        <div className='flex container flex-col md:flex-row rounded max-w-6xl mx-auto align-items bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 to-blue-900 mt-16 mb-16'>
+            <img src="./postjob.png" alt="post job" className='md:w-2/4 w-full h-full'/>
+            <div className='flex flex-col ml-4 w-full md:w-2/4 p-8'>
             <h2 className='text-white text-2xl font-semibold m-2'>Post your Job</h2>
             <p className='text-gray-50 text-sm '>Physicalli help you to find
             suitable worker for you job more faster. You can choose you location, add
@@ -83,9 +83,9 @@ export default function Body()
             </NavLink>
             </div>
         </div>
-        <div className='flex container rounded max-w-6xl mx-auto align-items bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 to-blue-900 mt-16 mb-16'>
-            <img src="./findjob.png" alt="post job" className='w-2/4 h-full'/>
-            <div className='flex flex-col ml-4 w-2/4 p-8'>
+        <div className='flex container flex-col md:flex-row rounded max-w-6xl mx-auto align-items bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 to-blue-900 mt-16 mb-16'>
+            <img src="./findjob.png" alt="post job" className='md:w-2/4 w-full h-full'/>
+            <div className='flex flex-col ml-4 w-full md:w-2/4 p-8'>
             <h2 className='text-white text-2xl font-semibold m-2'>Looking for job?</h2>
             <p className='text-gray-50 text-sm '>Are your certified professional? Do you
             have working experience? Start finding jobs in your locality 

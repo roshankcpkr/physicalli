@@ -4,15 +4,18 @@
     "apiName": "physicalli",
     "serviceName": "AppSync",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "expirationTime": 90,
-      "apiKeyExpirationDate": "2022-12-29T19:31:40.912Z",
-      "keyDescription": "physicalli"
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authphysicallie192945c"
     },
     "additionalAuthTypes": [
       {
-        "mode": "AMAZON_COGNITO_USER_POOLS",
-        "cognitoUserPoolId": "authphysicallie192945c"
+        "mode": "API_KEY",
+        "expirationTime": 90,
+        "apiKeyExpirationDate": "2022-12-29T20:53:33.435Z",
+        "keyDescription": "apinew"
+      },
+      {
+        "mode": "AWS_IAM"
       }
     ],
     "conflictResolution": {}
