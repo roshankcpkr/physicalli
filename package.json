@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "aws-amplify": "^4.3.36",
+    "dotenv": "^16.0.3",
     "maplibre-gl": "^2.4.0",
     "maplibre-gl-js-amplify": "^2.0.4",
     "react": "^18.2.0",
