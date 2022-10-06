@@ -7,7 +7,7 @@ export default function Header(props)
 {
     const {showLogin, showSignout, showDashboard} = props
     return (
-        <header className="h-16  py-10 sticky top-0 drop-shadow shadow-blue-600 border-b mb-8 bg-gradient-to-r from-black via-gray-600 to-gray-800">
+        <header className="h-16  py-10 sticky top-0 drop-shadow shadow-blue-600 border-b bg-gradient-to-r from-black via-gray-600 to-gray-800">
         <div className="container mx-auto max-width-lg h-full">
             <div className="flex justify-between h-full align-items">
                 <div className="text-gray-700 flex items-center align-items cursor-pointer">

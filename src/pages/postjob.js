@@ -8,6 +8,7 @@ import {createJobpost } from '../graphql/mutations'
 import config from "../aws-exports"
 import { Header } from '../components';
 import { useNavigate } from 'react-router-dom';
+import * as ROUTES from "../constants/routes";
 
 const {
     aws_user_files_s3_bucket_region:region,
@@ -171,11 +172,12 @@ export default function PostJob()
                 pro: "",
                 image: "",
             })
-            history("/dashboard")
+            history(ROUTES.FIND_JOB)
         }
         catch(err)
         {
             console.log('error adding job', err)
+            history(ROUTES.FIND_JOB)
         }
     }
     const handleImageUpload = async (e)=>{
