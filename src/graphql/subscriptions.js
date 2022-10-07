@@ -11,10 +11,10 @@ export const onCreateJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -28,10 +28,10 @@ export const onUpdateJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -45,10 +45,10 @@ export const onDeleteJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -62,10 +62,10 @@ export const onCreateUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;
@@ -79,10 +79,10 @@ export const onUpdateUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;
@@ -96,10 +96,10 @@ export const onDeleteUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;

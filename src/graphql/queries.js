@@ -11,10 +11,10 @@ export const getJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -33,10 +33,10 @@ export const listJobposts = /* GraphQL */ `
         price
         contact
         location
-        pro
         createdAt
         updatedAt
         owner
+        pro
       }
       nextToken
     }
@@ -52,10 +52,10 @@ export const getUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;
@@ -74,10 +74,10 @@ export const listUsers = /* GraphQL */ `
         description
         skill
         profilepic
-        location
         createdAt
         updatedAt
         owner
+        location
       }
       nextToken
     }

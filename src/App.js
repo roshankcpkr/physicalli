@@ -9,7 +9,7 @@ const DashboardPage = React.lazy(()=> import('./pages/dashboard'))
 const FindJob = React.lazy(()=> import('./pages/findjob'))
 const PostJob = React.lazy(()=> import('./pages/postjob'))
 const UpdateProfile = React.lazy(()=> import('./pages/updateProfile'))
-
+const OwnPost = React.lazy(()=> import('./pages/ownpost'))
 function App() {
 
   return (
@@ -22,6 +22,7 @@ function App() {
       <Route path = {ROUTES.FIND_JOB} element={<FindJob />} />
       <Route path = {ROUTES.POST_JOB} element={<PostJob />} />
       <Route path = {ROUTES.UPDATE_PROFILE} element={<UpdateProfile />} />
+      <Route path = {ROUTES.OWN_POST} element={<OwnPost />} />
     </Routes>
        </React.Suspense>
     </Router>

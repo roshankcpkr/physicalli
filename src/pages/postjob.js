@@ -83,13 +83,18 @@ export default function PostJob()
     const history = useNavigate()
     const [image, setImage] = useState(null)
     let [userEmail, setuserEmail] =  useState("")
+    const searchInput = useRef(null);
+    const [address, setAddress] = useState({});
+
     useEffect(
-       function ()
-       {
-              Auth.currentAuthenticatedUser().then(user => {
-                setuserEmail(user.attributes.email)
-            })
-       }, [])
+      ()=>{
+      return async function()
+       {    
+             const user = await  Auth.currentAuthenticatedUser()
+             setuserEmail(user.attributes.email)
+       }
+      }
+, [])
     const [jobdetails, setJobDetails] = useState({
         title: "",
         description: "",
@@ -97,11 +102,8 @@ export default function PostJob()
         location: "",
         contact: "",
         pro: "",
-        image: "",
+        image: ""
     })
-    const searchInput = useRef(null);
-    const [address, setAddress] = useState({});
-  
   
     // init gmap script
     const initMapScript = () => {
@@ -159,10 +161,10 @@ export default function PostJob()
         e.preventDefault()
         try{
             if(!jobdetails.title || !jobdetails.description || !jobdetails.contact || !jobdetails.location) return
-            await API.graphql(API.graphql(graphqlOperation(createJobpost, {
-                input: jobdetails
-            })))
-            
+            await API.graphql({
+              ...graphqlOperation(createJobpost, { input: jobdetails }),
+              authMode: "AMAZON_COGNITO_USER_POOLS",
+            });
             setJobDetails({
                 title: "",
                 description: "",
@@ -180,6 +182,7 @@ export default function PostJob()
             history(ROUTES.FIND_JOB)
         }
     }
+    console.log(address)
     const handleImageUpload = async (e)=>{
         e.preventDefault()
         const file = e.target.files[0]
@@ -227,6 +230,7 @@ export default function PostJob()
                                 name="location"
                                 placeholder='Enter your location'  
                                 onChange={(e) =>{
+                                  console.log("ok", address)
                                     setJobDetails({ ...jobdetails, location: e.target.value})
                                 }}
                                 className='mt-4 mb-2 border-2  py-2 px-4 rounded w-full'/>
@@ -249,6 +253,7 @@ export default function PostJob()
                             setJobDetails({ ...jobdetails, pro: e.target.value})
                         }}
                         placeholder='Plumber, Electrician etc..'  
+                        value={jobdetails.pro}
                         className='mt-4 mb-2 border-2  py-2 px-4 rounded w-3/4'/>
                     
                     <input 
@@ -257,6 +262,7 @@ export default function PostJob()
                             setJobDetails({ ...jobdetails, title: e.target.value})
                         }}
                         type="text" 
+                        value={jobdetails.title}
                         placeholder='Enter job title'  
                         className='mt-4 mb-2 border-2  py-2 px-4 rounded w-3/4'/>
                     <input 
@@ -265,6 +271,7 @@ export default function PostJob()
                              setJobDetails({ ...jobdetails, description: e.target.value})
                          }}
                         type="text" 
+                        value={jobdetails.description}
                         placeholder='Enter job description'  
                         className='mt-4 mb-2 border-2 py-2 px-4 rounded w-3/4'/>
                     <input 
@@ -273,6 +280,7 @@ export default function PostJob()
                              setJobDetails({ ...jobdetails, price: e.target.value})
                          }}
                         type="text" 
+                        value={jobdetails.price}
                         placeholder='Enter your budget'  
                         className='mt-4 mb-2 border-2 py-2 px-4 rounded w-3/4'/>
                      <input 
@@ -281,6 +289,7 @@ export default function PostJob()
                              setJobDetails({ ...jobdetails, contact: e.target.value})
                          }}
                         type="text" 
+                        value={jobdetails.contact}
                         placeholder='Enter your contact details'  
                         className='mt-4 mb-2 border-2 py-2 px-4 rounded w-3/4'/>
                     <button className='rounded-lg text-white font-semibold py-2 px-4 mt-4 text-lg transition ease-in-out delay-150 bg-gray-700 hover:scale-110 hover:bg-gray-800 duration-300' type="submit">Submit</button>

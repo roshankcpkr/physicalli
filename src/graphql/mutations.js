@@ -14,10 +14,10 @@ export const createJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -34,10 +34,10 @@ export const updateJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -54,10 +54,10 @@ export const deleteJobpost = /* GraphQL */ `
       price
       contact
       location
-      pro
       createdAt
       updatedAt
       owner
+      pro
     }
   }
 `;
@@ -74,10 +74,10 @@ export const createUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;
@@ -94,10 +94,10 @@ export const updateUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;
@@ -114,10 +114,10 @@ export const deleteUser = /* GraphQL */ `
       description
       skill
       profilepic
-      location
       createdAt
       updatedAt
       owner
+      location
     }
   }
 `;

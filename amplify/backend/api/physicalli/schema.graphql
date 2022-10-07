@@ -11,6 +11,9 @@ type Jobpost @model
   price: String
   contact: String!
   location: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  owner: String
   pro: String!
 }
 
@@ -26,5 +29,8 @@ type User @model @auth(rules: [
   description: String
   skill: [String]
   profilepic: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  owner: String
   location: String!
 }

@@ -30,6 +30,13 @@ export default function Dashboard()
                     <p className='text-gray-600 text-sm '>Update your profile</p>
                 </div>
                </NavLink>
+               <NavLink to={ROUTES.OWN_POST}>
+                <div className='flex flex-col m-2 hover:shadow-2xl items-center text-center align-items p-8'>
+                    <img src="./postjob.png" alt="connect with technician" className=' w-20'/>
+                    <p className='font-semibold text-base  m-2'>Check your own post</p>
+                    <p className='text-gray-600 text-sm '>Find the post done by you.</p>
+                </div>
+               </NavLink>
             </div>
             
         </div>
